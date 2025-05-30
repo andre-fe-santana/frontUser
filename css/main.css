@@ -1,0 +1,34 @@
+@import url(footer.css);
+@import url(navbar.css);
+
+/* paleta do projeto */
+
+:root{
+    --buttons: #E50A14;
+    --main-text: #fff;
+    --secondary-text: #ccc;
+    --main-background: #1A1A1D;
+    --component-background: #2C2C31;
+}
+
+/* Professor não especificou o fonte que ele usou, só colocou sans-serif */
+
+/* Configurações gerais  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-image: url("../assets/images/Group1.jpg");
+    background-size: cover;
+    background-position: center;
+    
+    /* teste */
+    height: 600px;
+    color: #fff;
+}
+
+
