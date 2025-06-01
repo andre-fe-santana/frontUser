@@ -6,6 +6,7 @@
     <title>StreamVibe</title>
     <link rel="shortcut icon" href="assets/flaticon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
     <header class="navbar">
@@ -36,135 +37,152 @@
     <main>
         <!-- SIDEBAR COM A FOTO, NOME E EMAIL-->
         <div class="profile-sidebar">
-            <div class="profile-sidebar-image">
-                <img src="assets/images/user_placeholder.png" alt="Imagem do Usuário">
-                <!-- o lapis que tem no Figma seria uma label que iria apontar para esse input file -->
-                <label for="editarFoto"><img src="" alt=""><img src="assets/svg/pencil-edit.svg" alt=""></label>
-                <input type="file" name="editarFoto" id=""> <!-- usa "display: none;" dentro do CSS pra tirar -->
-            </div>
 
-            <div class="profile-sidebar-data">
+            <div class="profile-content-flex">
 
-                <div class="profile-sidebar-data-nome">
-                    <label for="userName">Nome</label>
-                    <input type="text" name="userName" value="Seu nome..." disabled> <!-- disabled porque o usuário não pode alterar até clicar em algo -->
-                </div> 
+                <div class="profile-sidebar-content">
 
-                <div class="profile-sidebar-data-aboutme">
-                    <label for="aboutMe">Sobre Mim</label>
-                    <input type="text" name="aboutMe" value="lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum " disabled> <!-- disabled porque o usuário não pode alterar até clicar em algo -->
-                </div> 
+                    <div class="profile-sidebar-image">
+                        <img src="assets/images/user_placeholder.png" alt="Imagem do Usuário">
+                        <label for="editarFoto" class="edit-photo-label" title="Trocar foto de perfil">
+                            <i class="fa-solid fa-camera" aria-hidden="true"></i>
+                            <input type="file" name="editarFoto" id="editarFoto" style="display: none;" accept="image/*">
+                        </label>
+                    </div>
 
-                <div class="profile-sidebar-data-input">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" value="Seu email..." disabled> <!-- disabled porque o usuário não pode alterar até clicar em algo -->
-                </div> 
-        
-            </div>
+                    <div class="profile-sidebar-data">
 
-            <div class="profile-principal">
-                
-                <div class="profile-principal-wallet">
+                        <div class="profile-sidebar-data-nome">
+                            <label for="userName">Nome</label>
+                            <input type="text" name="userName" value="Seu nome..." disabled> <!-- disabled porque o usuário não pode alterar até clicar em algo -->
+                        </div> 
+
+                        <div class="profile-sidebar-data-aboutme">
+                            <label for="aboutMe">Sobre Mim</label>
+                            <textarea name="aboutMe" id="aboutMe" rows="5" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi vel consectetur cursus, nulla erat dictum urna, nec dictum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum.</textarea>
+                        </div> 
+
+                        <div class="profile-sidebar-data-input">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" value="Seu email..." disabled> <!-- disabled porque o usuário não pode alterar até clicar em algo -->
+                        </div> 
+
+                        <!-- Botão Salvar Alterações -->
+                        <button class="btn-salvar-alteracoes" type="button">Salvar Alterações</button>
+
+                        <!-- Botão Desconectar -->
+                        <button class="btn-desconectar" type="button">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            Desconectar
+                        </button>
+            
+                    </div>
+
+                </div>
+
+                <div class="profile-principal">
                     
-                    <h3>Seu Saldo</h3>
-                    <span>
-                        <img src="assets/svg/piggy-bank.svg" alt="Piggy Bank">
-                        <span>1.00000004 VIBECOINS</span>
-                    </span>
-
-                </div>
-
-                <div class="profile-principal-stats">
-
-                    <h3>Dados</h3>
-
-                    <div class="profile-principal-stats-item">
-                        <span><img src="assets/svg/comments.svg" alt="Commentary Icon"></span>
-                        <span>10</span>
-                        <span>Comentários</span>
-                    </div>
-                    <div class="profile-principal-stats-item">
-                        <span><img src="assets/svg/movies-user.svg" alt="Movies Rated Icon"></span>
-                        <span>10</span>
-                        <span>Filmes Avaliados</span>
-                    </div>
-                    <div class="profile-principal-stats-item">
-                        <span><img src="assets/svg/movies-added.svg" alt="Movies Added Icon"></span>
-                        <span>10</span>
-                        <span>Filmes Adicionados</span>
+                    <div class="profile-principal-wallet">
+                        <div class="wallet-balance-container">
+                            <h3>Seu Saldo</h3>
+                            <div class="wallet-balance-inner">
+                                <i class="fa-solid fa-piggy-bank wallet-icon"></i>
+                                <span class="wallet-balance">1.00000004 VIBECOINS</span>
+                            </div>
+                        </div>
                     </div>
 
-                </div>
-
-                <div class="profile-principal-latest">
+                    <div class="profile-principal-stats">
+                        <h3>Dados</h3>
+                        <div class="profile-principal-stats-cards">
+                            <div class="profile-principal-stats-item">
+                                <i class="fa-solid fa-comments stats-icon"></i>
+                                <div class="stats-texts">
+                                    <span class="stats-value">10</span>
+                                    <span class="stats-label">Comentários</span>
+                                </div>
+                            </div>
+                            <div class="profile-principal-stats-item">
+                                <i class="fa-solid fa-star stats-icon"></i>
+                                <div class="stats-texts">
+                                    <span class="stats-value">10</span>
+                                    <span class="stats-label">Filmes Avaliados</span>
+                                </div>
+                            </div>
+                            <div class="profile-principal-stats-item">
+                                <i class="fa-solid fa-film stats-icon"></i>
+                                <div class="stats-texts">
+                                    <span class="stats-value">10</span>
+                                    <span class="stats-label">Filmes Adicionados</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     
-                    <h3>Suas Avaliações</h3>
-
-                    <div class="profile-principal-latest-movie">
-                        <img src="assets/images/posters/godfather.jpg" alt="Poster">
-
-                        <div class="movie-stars">
-                            <img src="assets/svg/star-rating.svg" alt="Rating Star">
-                            <img src="assets/svg/star-rating.svg" alt="Rating Star">
-                            <img src="assets/svg/star-rating.svg" alt="Rating Star">
-                            <img src="assets/svg/star-rating.svg" alt="Rating Star">
-                            <img src="assets/svg/star-rating.svg" alt="Rating Star">
+                    <div class="profile-principal-latest">
+                        
+                        <h3>Suas Avaliações</h3>
+                        <div class="profile-principal-latest-cards">
+                            <!-- Filmes já existentes -->
+                            <div class="profile-principal-latest-item">
+                                <img src="assets/images/posters/godfather.jpg" alt="Poster" class="latest-movie-poster">
+                                <div class="latest-movie-stars">
+                                    <img src="assets/svg/star-rating.svg" alt="Rating Star">
+                                    <img src="assets/svg/star-rating.svg" alt="Rating Star">
+                                    <img src="assets/svg/star-rating.svg" alt="Rating Star">
+                                    <img src="assets/svg/star-rating.svg" alt="Rating Star">
+                                    <img src="assets/svg/star-rating.svg" alt="Rating Star">
+                                </div>
+                            </div>
+                            <div class="profile-principal-latest-item">
+                                <img src="assets/images/posters/godfather_2.jpg" alt="Poster" class="latest-movie-poster">
+                                <div class="latest-movie-stars">
+                                    <img src="assets/svg/star-rating.svg" alt="Rating Star">
+                                    <img src="assets/svg/star-rating.svg" alt="Rating Star">
+                                    <img src="assets/svg/star-rating.svg" alt="Rating Star">
+                                    <img src="assets/svg/star-rating.svg" alt="Rating Star">
+                                    <img src="assets/svg/star-rating.svg" alt="Rating Star">
+                                </div>
+                            </div>
+                            <div class="profile-principal-latest-item">
+                                <img src="assets/images/posters/click.jpg" alt="Poster" class="latest-movie-poster">
+                                <div class="latest-movie-stars">
+                                    <img src="assets/svg/star-rating.svg" alt="Rating Star">
+                                    <img src="assets/svg/star-rating.svg" alt="Rating Star">
+                                    <img src="assets/svg/star-rating.svg" alt="Rating Star">
+                                    <img src="assets/svg/star-rating.svg" alt="Rating Star">
+                                    <img src="assets/svg/star-rating.svg" alt="Rating Star">
+                                </div>
+                            </div>
+                            <!-- Novos filmes adicionados -->
+                            <div class="profile-principal-latest-item">
+                                <img src="assets/images/posters/pixels.jpg" alt="Poster Pixels" class="latest-movie-poster">
+                                <div class="latest-movie-stars">
+                                    <img src="assets/svg/star-rating.svg" alt="Rating Star">
+                                    <img src="assets/svg/star-rating.svg" alt="Rating Star">
+                                    <img src="assets/svg/star-rating.svg" alt="Rating Star">
+                                </div>
+                            </div>
+                            <div class="profile-principal-latest-item">
+                                <img src="assets/images/posters/dragonball_evolution.jpg" alt="Poster Dragon Ball Evolution Live Action" class="latest-movie-poster">
+                                <div class="latest-movie-stars">
+                                    <img src="assets/svg/star-rating.svg" alt="Rating Star">
+                                </div>
+                            </div>
+                            <div class="profile-principal-latest-item">
+                                <img src="assets/images/posters/super_herois_o_filme.jpg" alt="Poster Super Herois O Filme" class="latest-movie-poster">
+                                <div class="latest-movie-stars">
+                                    <img src="assets/svg/star-rating.svg" alt="Rating Star">
+                                    <img src="assets/svg/star-rating.svg" alt="Rating Star">
+                                </div>
+                            </div>
                         </div>
-
                     </div>
-                    <div class="profile-principal-latest-movie">
-                        <img src="assets/images/posters/godfather.jpg" alt="Poster">
 
-                        <div class="movie-stars">
-                            <img src="assets/svg/star-rating.svg" alt="Rating Star">
-                            <img src="assets/svg/star-rating.svg" alt="Rating Star">
-                            <img src="assets/svg/star-rating.svg" alt="Rating Star">
-                            <img src="assets/svg/star-rating.svg" alt="Rating Star">
-                            <img src="assets/svg/star-rating.svg" alt="Rating Star">
-                        </div>
-
-                    </div>
-                    <div class="profile-principal-latest-movie">
-                        <img src="assets/images/posters/godfather_2.jpg" alt="Poster">
-
-                        <div class="movie-stars">
-                            <img src="assets/svg/star-rating.svg" alt="Rating Star">
-                            <img src="assets/svg/star-rating.svg" alt="Rating Star">
-                            <img src="assets/svg/star-rating.svg" alt="Rating Star">
-                            <img src="assets/svg/star-rating.svg" alt="Rating Star">
-                            <img src="assets/svg/star-rating.svg" alt="Rating Star">
-                        </div>
-
-                    </div>
-                    <div class="profile-principal-latest-movie">
-                        <img src="assets/images/posters/gente_grande_2.jpg" alt="Poster">
-
-                        <div class="movie-stars">
-                            <img src="assets/svg/star-rating.svg" alt="Rating Star">
-                            <img src="assets/svg/star-rating.svg" alt="Rating Star">
-                            <img src="assets/svg/star-rating.svg" alt="Rating Star">
-                            <img src="assets/svg/star-rating.svg" alt="Rating Star">
-                            <img src="assets/svg/star-rating.svg" alt="Rating Star">
-                        </div>
-
-                    </div>
-                    <div class="profile-principal-latest-movie">
-                        <img src="assets/images/posters/click.jpg" alt="Poster">
-
-                        <div class="movie-stars">
-                            <img src="assets/svg/star-rating.svg" alt="Rating Star">
-                            <img src="assets/svg/star-rating.svg" alt="Rating Star">
-                            <img src="assets/svg/star-rating.svg" alt="Rating Star">
-                            <img src="assets/svg/star-rating.svg" alt="Rating Star">
-                            <img src="assets/svg/star-rating.svg" alt="Rating Star">
-                        </div>
-
-                    </div>
 
                 </div>
 
             </div>
-
 
         </div>
     </main>
