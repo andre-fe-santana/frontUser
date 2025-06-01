@@ -38,16 +38,22 @@
         <!-- SIDEBAR COM A FOTO, NOME E EMAIL-->
         <div class="profile-sidebar">
 
-            <div class="profile-content-flex">
+            <div class="profile-content-flex fade-in">
 
                 <div class="profile-sidebar-content">
 
                     <div class="profile-sidebar-image">
-                        <img src="assets/images/user_placeholder.png" alt="Imagem do Usuário">
-                        <label for="editarFoto" class="edit-photo-label" title="Trocar foto de perfil">
-                            <i class="fa-solid fa-camera" aria-hidden="true"></i>
+                        <label class="edit-photo-label" title="Trocar foto de perfil">
+                            <span class="circle-border">
+                                <svg width="48" height="48">
+                                    <circle cx="24" cy="24" r="20"/>
+                                </svg>
+                            </span>
+                            <i class="fa-solid fa-camera icon-camera" aria-hidden="true"></i>
+                            <i class="fa-solid fa-upload icon-upload" aria-hidden="true"></i>
                             <input type="file" name="editarFoto" id="editarFoto" style="display: none;" accept="image/*">
                         </label>
+                        <img src="assets/images/user_placeholder.png" alt="Imagem do Usuário">
                     </div>
 
                     <div class="profile-sidebar-data">
@@ -88,6 +94,9 @@
                             <div class="wallet-balance-inner">
                                 <i class="fa-solid fa-piggy-bank wallet-icon"></i>
                                 <span class="wallet-balance">1.00000004 VIBECOINS</span>
+                                <svg class="circle-border" width="48" height="48">
+                                    <circle cx="24" cy="24" r="22"></circle>
+                                </svg>
                             </div>
                         </div>
                     </div>
